@@ -1,0 +1,92 @@
+/* Import Google Font - Varela Round*/
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+/* Defalut Settings */
+*:before,
+*:after,
+* {
+  padding: 0px;
+  margin: 0px;
+
+  box-sizing: border-box;
+
+  font-family: 'Varela Round', sans-serif;
+}
+
+/* Color Variables*/
+:root{
+  --neon: #ff006e;
+  --neon__dark: #b5004e;
+}
+
+body{
+  /* Background color */
+  background-color: black;
+
+  /* Maximalize */
+  width: 100vw;
+  height: 100vh;
+
+  /* Disable Scrolling */
+  overflow: hidden;
+
+  /* Center */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Neon Text */
+.neon {
+  /* Font property */
+  font-size: auto;
+
+  /* Neon Effect*/
+  color: #fff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 15px #fff,
+    0 0 42px var(--neon),
+    0 0 82px var(--neon),
+    0 0 92px var(--neon),
+    0 0 102px var(--neon),
+    0 0 151px var(--neon__dark);
+
+  opacity: 1;
+
+  /* Animation */
+  animation: blink 3s infinite;
+  animation-timing-function: linear;
+}
+
+/* Frame around the text*/
+.frame{
+  width: auto;
+  height: auto;
+  padding: 60px;
+
+  /* Neon Effect*/
+  border: solid 10px #fff;
+  border-radius: 20px;
+  box-shadow: 0px 0px 15px 10px var(--neon__dark),
+              inset 0px 0px 15px 10px var(--neon__dark),
+
+              0px 0px 7px 2px #fff,
+              inset 0px 0px 7px 2px #fff;
+
+
+  /* Animation */
+  animation: blink 3s infinite;
+  animation-timing-function: linear;
+}
+
+section, section a, section span{
+  color: #8a8a8a;
+  font-size: 10px;
+}
+
+section{
+  position: absolute;
+  bottom: 20px;
+}
